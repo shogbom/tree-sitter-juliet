@@ -641,6 +641,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "var_statement"
+        },
+        {
+          "type": "SYMBOL",
           "name": "export_statement"
         },
         {
@@ -1328,6 +1332,23 @@
           {
             "type": "STRING",
             "value": "local"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_top_level"
+          }
+        ]
+      }
+    },
+    "var_statement": {
+      "type": "PREC_RIGHT",
+      "value": -3,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "var"
           },
           {
             "type": "SYMBOL",
@@ -3345,6 +3366,10 @@
                       {
                         "type": "STRING",
                         "value": "end"
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "var"
                       }
                     ]
                   }
@@ -8249,5 +8274,6 @@
     "_expression",
     "_statement",
     "_definition"
-  ]
+  ],
+  "reserved": {}
 }

@@ -256,6 +256,10 @@
         "named": true
       },
       {
+        "type": "var_statement",
+        "named": true
+      },
+      {
         "type": "while_statement",
         "named": true
       }
@@ -2997,6 +3001,29 @@
     }
   },
   {
+    "type": "var_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "_expression",
+          "named": true
+        },
+        {
+          "type": "assignment",
+          "named": true
+        },
+        {
+          "type": "open_tuple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "vector_expression",
     "named": true,
     "fields": {},
@@ -3306,6 +3333,10 @@
   },
   {
     "type": "using",
+    "named": false
+  },
+  {
+    "type": "var",
     "named": false
   },
   {
