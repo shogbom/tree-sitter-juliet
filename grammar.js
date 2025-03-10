@@ -119,6 +119,7 @@ const KEYWORDS = choice(
   'global',
   'local',
   'end',
+  'var',
 );
 
 module.exports = grammar({
@@ -327,6 +328,7 @@ module.exports = grammar({
       $.const_statement,
       $.global_statement,
       $.local_statement,
+      $.var_statement,
       $.export_statement,
       $.import_statement,
       $.public_statement,
@@ -440,6 +442,11 @@ module.exports = grammar({
 
     local_statement: $ => prec.right(PREC.stmt, seq(
       'local',
+      $._top_level,
+    )),
+
+    var_statement: $ => prec.right(PREC.stmt, seq(
+      'var',
       $._top_level,
     )),
 
